@@ -1,10 +1,18 @@
 # Developer Survey CLI
 
-- Assignment Example for Week 7: Programming — JavaScript, Node.js, npm, TypeScript
+This is a simple developer survey that uses Javascript and a NPM package called [Inquirer](https://www.npmjs.com/package/inquirer) to display the questions through CLI.
 
-We will make Developer Survey using CLI and JavaScript
+## 📝 List of Questions
 
-## Prerequisites
+- What's your first name?
+- What's your email address?
+- Are you an experienced developer?
+- If yes:
+  - How many years of experience do you have with Javascript?
+  - What JavaScript libraries did you know?
+  - What is your desired salary?
+
+## 🛠️ Pre-requisites
 
 - Node.js
 - NPM
@@ -12,37 +20,14 @@ We will make Developer Survey using CLI and JavaScript
 - JavaScript
 - Terminal
 
-You can use starter code from folder starter
+## 🖥️ Running the Project
 
-- What's your first name?
-  Rules
-  - Input type "input"
-  - Validate not empty
+Clone the project to your computer, then access the terminal within the project directory and type in the following command:
 
-- Hello (name from question 1) What's your email address?
-  Rules
-  - Input type "input"
-  - Validate not empty
+```sh
+npm install
+npm start
+```
 
-- Are you experienced Developer?
-  Rules
-  - Input type "list", [yes, no]
-  - Validate not empty
-
-- How many years of experience you have with JavaScript?
-  Rules
-  - Input type "list", ["0-1", "1-3", "3-5", "5-10", "10+"]
-  - Validate not empty
-  - Only show if question 3 selected "yes"
-
-- What JavaScript library do you know?
-  Rules
-  - Input type "checkbox", ["React.js", "Vue", "Angular", "Node.js", "jQuery", "D3.js"]
-  - Validate not empty
-  - Only show if question 3 selected "yes"
-
-- What is your desired salary?
-  Rules
-  - Input type "number"
-  - Validate salary more than zero
-  - Only show if question 3 selected "yes"
+- `npm install` - install the necessary dependencies
+- `npm start` - executes a script to start the survey
