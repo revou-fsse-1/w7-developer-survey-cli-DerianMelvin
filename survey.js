@@ -32,7 +32,7 @@ const questions = [
     message: "What's your first name?",
     validate: validate(validateInput, "Please enter your first name"),
     filter(answer) {
-      return answer.trim();
+      return answer.trim().charAt(0).toUpperCase() + answer.trim().slice(1);
     },
   },
   {
@@ -85,6 +85,8 @@ const questions = [
 inquirer
   .prompt(questions)
   .then((answers) => {
+    console.log("----- Thank you for filling in the survey! -----");
+    console.log("----- Here's a quick summary of your response: -----");
     console.log(JSON.stringify(answers, null, 2));
   })
   .catch((error) => {
